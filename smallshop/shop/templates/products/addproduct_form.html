@@ -1,0 +1,34 @@
+{% extends 'base.html' %}
+
+{% block content %}
+
+<html>
+
+    <div>
+
+        <div style= "text-align: center; " >
+            <h1 style="height: 100px; background-color:rgb(175, 232, 230);">Insert New Product </h1>
+           <br>
+        </div>
+            
+            <form style= "text-align: center; "  action="", method="POST">
+                {% csrf_token %}
+                {{django_form.as_p}}
+                <!--#{{django_form.as_p}}-->
+                <!--#{{django_form.as_div}}-->
+                <!--#{{django_form.as_table}}-->
+                <br>
+
+               
+                    <button type="submit" class="btn btn-primary">Submit</button>
+               
+                
+            </form>
+            
+
+    </div>
+    
+    
+</html>
+
+{% endblock content %}

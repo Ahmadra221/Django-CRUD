@@ -1,0 +1,45 @@
+{% extends 'base.html' %}
+{% block content %}
+{% load static %}
+
+
+
+    <div class="container py-5">
+    <table class="table">
+        <thead>
+          <tr>
+            <th scope="col">ID</th>
+            <th scope="col">Product Name</th>
+            <th scope="col">Category</th>
+            <th scope="col">Store Code</th>
+            <th scope="col">Expiry date</th>
+            <th scope="col">Operations</th>
+          </tr>
+        </thead>
+        <tbody>
+            {% for product in products %}
+
+             <tr>
+             <td>{{product.id}}</td> 
+             <td>{{product.product_name}}</td> 
+             <td>{{product.product_category}}</td> 
+             <td>{{product.product_store_code}}</td> 
+             <td>{{product.product_expiry_date}}</td> 
+             <td> 
+
+              <a href="/shop/products/edit/{{product.id}}/" class="btn btn-primary">Edit</a>
+              <a href="/shop/products/view/{{product.id}}/" class="btn btn-primary">View Product</a>
+              <a href="/shop/products/delete/{{product.id}}/" class="btn btn-danger">Delete</a>
+
+             </td> 
+             </tr>
+           
+           {% endfor %}
+          
+        </tbody>
+      </table>
+
+  </div>
+
+
+  {% endblock content %}

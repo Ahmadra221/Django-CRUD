@@ -1,0 +1,19 @@
+<html>
+
+    <div style="background-color: cadetblue; text-align: center; " >
+        <h1 style="height: 50px;">Update Exsisting Product</h1>
+        <hr>
+        
+        <form action="", method="POST", style="background-color: burlywood;">
+            {% csrf_token %}
+            {{form.as_p}}
+            <!--#{{django_form.as_p}}-->
+            <!--#{{django_form.as_div}}-->
+            <!--#{{django_form.as_table}}-->
+            <br>
+            <input type="submit" name="Submit" > 
+        </form>
+        
+    </div>
+
+</html>

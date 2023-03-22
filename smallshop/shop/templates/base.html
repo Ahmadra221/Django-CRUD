@@ -1,0 +1,36 @@
+{% load static %}
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        
+        {% load bootstrap5 %}
+        {% bootstrap_css %}
+        {% bootstrap_javascript %}
+
+        <link rel="icon" href="{% static 'shop/' %}logo.png" type="image/icon type">
+
+    <title>MiniShop</title>
+</head>
+<body >
+    
+<!-- header -->
+{% include 'header.html' %}
+
+
+<div style="min-height: 600px;">
+
+{% block content %}
+
+{% endblock content %}
+</div>
+<!--Content-->
+
+
+
+<!-- Footer -->
+
+{% include 'footer.html' %}
+
+
+</body>
+</html>
